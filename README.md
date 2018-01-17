@@ -221,6 +221,6 @@ demo中的MapVC控制器中，设置了定位、地图、正反编码、大头�
 ------------------------------------------------------------------------------------------------------
 ```
 
-![展示图](https://github.com/diankuanghuolong/BaiduMap-ShowMap/blob/master/showImages/地图.gif)
+![展示图](https://github.com/diankuanghuolong/BaiduMap-ShowMap/blob/master/showImages/map.gif)
 
 
