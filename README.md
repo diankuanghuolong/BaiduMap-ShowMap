@@ -7,11 +7,25 @@
 >简介：百度地图的定位以及地图显示功能集成。手动集成的方法此处不作介绍了，我用的是pod方法集成的。
 
 
-- 1.项目集成百度sdk。在你的Podfile文件中，导入百度sdk：（导入后会有很多ios9以后的第三方警告问题，如下解决,若还有未解决的警告可以进去到警告页面找到相应位置，）
-
+- 1.项目集成百度sdk。在你的Podfile文件中，导入百度sdk：（导入后会有很多ios9以后的第三方警告问题，如下解决）
+```
 platform :ios, '8.0'
 inhibit_all_warnings!   ##忽略警告⚠️
 target '你的项目名’ do
+```
+若还有未解决的警告可以进去到警告页面找到相应位置,如下设置，中间部分警告不再提示
+```
+#pragma clang diagnostic push//忽略警告------  @param delegate
+
+/**
+ *启动引擎
+ *@param key 申请的有效key
+ *@param delegate
+ */
+
+#pragma clang diagnostic ignored"-Wdeprecated-declarations"//忽略警告-----  @param delegate
+```
+
 - 2.环境配置：因为要用到后台定位和地图定位功能，需要作如下配置
 
    （a.）plist文件配置如下图，4项，第一项为网络https配置：
