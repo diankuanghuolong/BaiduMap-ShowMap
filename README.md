@@ -182,38 +182,38 @@ demo中的MapVC控制器中，设置了定位、地图、正反编码、大头�
 此处虽然是在map上添加标注点 BMKPointAnnotation，但是他的作用是为了显示你自定义的BMKAnnotationView 的title。在自定义的BMKAnnotationView中已经设置BMKPointAnnotation的title为不显示（self.canShowCallout = NO;//禁止原生气泡显示）
        -(void)showAllPoints
         {
-            BMKPointAnnotation *pointAnnotation = [[BMKPointAnnotation alloc] init];
-            pointAnnotation.coordinate = CLLocationCoordinate2DMake(40.003765106201172 + 0.0004, 116.35929870605469 - 0.0004);
-            pointAnnotation.title = @"上行：1";
-            pointAnnotation.subtitle = @"下行：1";
-            [_mapView addAnnotation:pointAnnotation];
-            //    [_mapView selectAnnotation:pointAnnotation animated:YES];
+             BMKPointAnnotation *pointAnnotation = [[BMKPointAnnotation alloc] init];
+             pointAnnotation.coordinate = CLLocationCoordinate2DMake(40.003765106201172 + 0.0004, 116.35929870605469 - 0.0004);
+             pointAnnotation.title = @"唯有工作";
+             pointAnnotation.subtitle = @"能使我快乐";
+             [_mapView addAnnotation:pointAnnotation];
+             //    [_mapView selectAnnotation:pointAnnotation animated:YES];
 
-            BMKPointAnnotation *pointAnnotation1 = [[BMKPointAnnotation alloc] init];
-            pointAnnotation1.coordinate = CLLocationCoordinate2DMake(40.003765106201172, 116.35929870605469 + 0.0004);
-            pointAnnotation1.title = @"上行：2";
-            pointAnnotation1.subtitle = @"下行：2";
-            [_mapView addAnnotation:pointAnnotation1];
-            //    [_mapView selectAnnotation:pointAnnotation1 animated:YES];
+             BMKPointAnnotation *pointAnnotation1 = [[BMKPointAnnotation alloc] init];
+             pointAnnotation1.coordinate = CLLocationCoordinate2DMake(40.003765106201172, 116.35929870605469 + 0.0004);
+             pointAnnotation1.title = @"朕的一生啊，";
+             pointAnnotation1.subtitle = @"就是要写bug";
+             [_mapView addAnnotation:pointAnnotation1];
+             //    [_mapView selectAnnotation:pointAnnotation1 animated:YES];
 
 
-            BMKPointAnnotation *pointAnnotation2 = [[BMKPointAnnotation alloc] init];
-            pointAnnotation2.coordinate = CLLocationCoordinate2DMake(40.003765106201172 + 0.0004, 116.35929870605469 + 0.0004);
-            pointAnnotation2.title = @"上行：3";
-            pointAnnotation2.subtitle = @"下行：3";
-            [_mapView addAnnotation:pointAnnotation2];
+             BMKPointAnnotation *pointAnnotation2 = [[BMKPointAnnotation alloc] init];
+             pointAnnotation2.coordinate = CLLocationCoordinate2DMake(40.003765106201172 + 0.0004, 116.35929870605469 + 0.0004);
+             pointAnnotation2.title = @"似奔腾之群马，";
+             pointAnnotation2.subtitle = @"似瀑下之江流";
+             [_mapView addAnnotation:pointAnnotation2];
 
-            BMKPointAnnotation *pointAnnotation3 = [[BMKPointAnnotation alloc] init];
-            pointAnnotation3.coordinate = CLLocationCoordinate2DMake(40.003765106201172, 116.35929870605469 + 0.0008);
-            pointAnnotation3.title = @"上行：4";
-            pointAnnotation3.subtitle = @"下行：4";
-            [_mapView addAnnotation:pointAnnotation3];
+             BMKPointAnnotation *pointAnnotation3 = [[BMKPointAnnotation alloc] init];
+             pointAnnotation3.coordinate = CLLocationCoordinate2DMake(40.003765106201172, 116.35929870605469 + 0.0008);
+             pointAnnotation3.title = @"群马喜疾驰";
+             pointAnnotation3.subtitle = @"江流爱湍游";
+             [_mapView addAnnotation:pointAnnotation3];
 
-            BMKPointAnnotation *pointAnnotation4 = [[BMKPointAnnotation alloc] init];
-            pointAnnotation4.coordinate = CLLocationCoordinate2DMake(40.003765106201172 + 0.0008, 116.35929870605469 + 0.0004);
-            pointAnnotation4.title = @"上行：5";
-            pointAnnotation4.subtitle = @"下行：5";
-            [_mapView addAnnotation:pointAnnotation4];
+             BMKPointAnnotation *pointAnnotation4 = [[BMKPointAnnotation alloc] init];
+             pointAnnotation4.coordinate = CLLocationCoordinate2DMake(40.003765106201172 + 0.0008, 116.35929870605469 + 0.0004);
+             pointAnnotation4.title = @"日月虽有坠，";
+             pointAnnotation4.subtitle = @"我志岂肯休？";
+             [_mapView addAnnotation:pointAnnotation4];
 
         }
 
