@@ -3,13 +3,13 @@
 
 #为了维护宇宙的和平，又鉴于网上资料的不详细，更为了防止世界被破坏，本文讲详细讲解一个百度的集成方案，保证实用。
 >简介：百度地图的定位以及地图显示功能集成。手动集成的方法此处不作介绍了，我用的是pod方法集成的。
-
 - 1. 项目集成百度sdk。在你的Podfile文件中，导入百度sdk：（导入后会有很多ios9以后的第三方警告问题，如下解决,若还有未解决的警告可以进去到警告页面找到相应位置，）
 
 platform :ios, '8.0'
 inhibit_all_warnings!   ##忽略警告⚠️
 target '你的项目名’ do
 - 2.环境配置：因为要用到后台定位和地图定位功能，需要作如下配置
+
     （a. ）plist文件配置如下图，4项，第一项未网络https配置：
 
      (b.)后台定位设置，如图
@@ -24,7 +24,7 @@ target '你的项目名’ do
 {
     _mapManager = [[BMKMapManager alloc]init];
     // 如果要关注网络及授权验证事件，请设定     generalDelegate参数
-    BOOL ret = [_mapManager start:` @"hHycKldnuGp2wwpjgYBvlbsYcmLUCjHb" `  generalDelegate:nil];
+    BOOL ret = [_mapManager start:@"hHycKldnuGp2wwpjgYBvlbsYcmLUCjHb"  generalDelegate:nil];
     if (!ret) {
     NSLog(@"manager start failed!");
     }
@@ -33,7 +33,7 @@ target '你的项目名’ do
 ```
 demo中的MapVC控制器中，设置了定位、地图、正反编码、大头针添加、大头针移动、大头针title显示。（注释掉部分代码，可以demo中没用，有兴趣的可以打开试试效果）
 
-##大头针title都显示问题
+## 大头针title都显示问题
 >这里有个问题介绍下：
     大头针气泡上的title和subtitle显示问题：baidu自己的title显示是，如果你设置了现实，默认是选中哪个，哪个的title显示，其他的不是选中状态，所以不会显示。如果项目中，你需要做到所有大头针的title都显示，那么baidu默认BMKPointAnnotation无法满足，可以自定义BMKAnnotationView，添加titleL来实现，具体做法在demo中的MapVC中可以找到。为了方便了解，这里把处理部分的代码贴出来，如下：
 ```
