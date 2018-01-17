@@ -1,7 +1,8 @@
 # BaiduMap-ShowMap
 百度地图定位，地图展示功能、大头针，多个大头针及气泡title展示。
 
-![简书]（http://www.jianshu.com/writer#/notebooks/19387991/notes/22631443/preview）
+[简书]（http://www.jianshu.com/writer#/notebooks/19387991/notes/22631443/preview）
+
 #为了维护宇宙的和平，又鉴于网上资料的不详细，更为了防止世界被破坏，本文讲详细讲解一个百度的集成方案，保证实用。
 >简介：百度地图的定位以及地图显示功能集成。手动集成的方法此处不作介绍了，我用的是pod方法集成的。
 
@@ -12,6 +13,7 @@ platform :ios, '8.0'
 inhibit_all_warnings!   ##忽略警告⚠️
 target '你的项目名’ do
 - 2.环境配置：因为要用到后台定位和地图定位功能，需要作如下配置
+
    （a.）plist文件配置如下图，4项，第一项为网络https配置：
    
 ![展示图片](https://github.com/diankuanghuolong/BaiduMap-ShowMap/blob/master/showImages/plist.png)
