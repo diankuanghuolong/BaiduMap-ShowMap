@@ -22,7 +22,7 @@ target '你的项目名’ do
     
 ![展示图片](https://github.com/diankuanghuolong/BaiduMap-ShowMap/blob/master/showImages/backgroud.png)
 
--3.注册：在百度地图开发平台注册并创建你的app，记得app名字要和你创建的项目名字一直，然后在百度平台获取key。
+-3.注册：在百度地图开发平台注册并创建你的app，记得app名字要和你创建的项目名字一致，然后在百度平台获取key。
         再进入你项目中，AppDelegate中设置。将你的AppDelegate后缀改为.mm（用到C语法，可以自己去查查）。
 ```
 下边代码可以在demo中查看
@@ -40,7 +40,7 @@ target '你的项目名’ do
 }
 
 ```
-demo中的MapVC控制器中，设置了定位、地图、正反编码、大头针添加、大头针移动、大头针title显示。（注释掉部分代码，可以demo中没用，有兴趣的可以打开试试效果）
+demo中的MapVC控制器中，设置了定位、地图、正反编码、大头针添加、大头针移动、大头针title显示。（注释掉部分代码，demo中没用，有兴趣的可以打开试试效果）
 
 ## 大头针title都显示问题
 >这里有个问题介绍下：
