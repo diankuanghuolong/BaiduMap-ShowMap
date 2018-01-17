@@ -1,7 +1,7 @@
 # BaiduMap-ShowMap
 百度地图定位，地图展示功能、大头针，多个大头针及气泡title展示。
 
-[简书]（http://www.jianshu.com/writer#/notebooks/19387991/notes/22631443/preview）
+![简书]（https://www.jianshu.com/p/da3b11d5dfba）
 
 #为了维护宇宙的和平，又鉴于网上资料的不详细，更为了防止世界被破坏，本文讲详细讲解一个百度的集成方案，保证实用。
 >简介：百度地图的定位以及地图显示功能集成。手动集成的方法此处不作介绍了，我用的是pod方法集成的。
@@ -42,9 +42,9 @@ target '你的项目名’ do
 ```
 demo中的MapVC控制器中，设置了定位、地图、正反编码、大头针添加、大头针移动、大头针title显示。（注释掉部分代码，demo中没用，有兴趣的可以打开试试效果）
 
-## 大头针title都显示问题
+## 大头针title的显示问题
 >这里有个问题介绍下：
-    大头针气泡上的title和subtitle显示问题：baidu自己的title显示是，如果你设置了现实，默认是选中哪个，哪个的title显示，其他的不是选中状态，所以不会显示。如果项目中，你需要做到所有大头针的title都显示，那么baidu默认BMKPointAnnotation无法满足，可以自定义BMKAnnotationView，添加titleL来实现，具体做法在demo中的MapVC中可以找到。为了方便了解，这里把处理部分的代码贴出来，如下：
+    大头针气泡上的title和subtitle显示问题：baidu自己的title显示是，如果你设置了显示，默认是选中哪个，哪个的title显示，其他的不是选中状态，所以不会显示。如果项目中，你需要做到所有大头针的title都显示，那么baidu默认BMKPointAnnotation无法满足，可以自定义BMKAnnotationView，添加titleL来实现，具体做法在demo中的MapVC中可以找到。为了方便了解，这里把处理部分的代码贴出来，如下：
 ```
 大致思路如下：
 1.先在vc中自定义带title的BMKAnnotationView；
