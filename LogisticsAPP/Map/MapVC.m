@@ -57,9 +57,9 @@
         _subTitleL.font = [UIFont systemFontOfSize:13];
         _subTitleL.backgroundColor = [UIColor clearColor];
         [tipView addSubview:_subTitleL];
-     
         
-         self.canShowCallout = NO;//禁止原生气泡显示
+        
+        self.canShowCallout = NO;//禁止原生气泡显示
     }
     return self;
 }
@@ -267,12 +267,12 @@
     if (sender.selected)
     {
         _mapView.frame = CGRectMake(0, SafeAreaTopHeight, SCREEN_WIDTH, SCREEN_HEIGHT - SafeAreaTopHeight - SafeAreaBottomHeight);
-//        _tableView.hidden = YES;
+        //        _tableView.hidden = YES;
     }
     else
     {
         _mapView.frame = CGRectMake(0, SafeAreaTopHeight, SCREEN_WIDTH, SCREEN_HEIGHT - SafeAreaTopHeight - SafeAreaBottomHeight - 50);
-//        _tableView.hidden = NO;
+        //        _tableView.hidden = NO;
     }
     _mapCenterPoint.frame = CGRectMake((_mapView.width - 23)/2, (_mapView.height - 23)/2 + 64, 23, 23);
 }
@@ -309,23 +309,23 @@
         _addressStr = result.address;
         _addressL.text = _addressStr;
         
-//       //测试点大头针
-//        BMKPointAnnotation *pointAnnotation = [[BMKPointAnnotation alloc] init];
-//        pointAnnotation.coordinate = CLLocationCoordinate2DMake(result.location.latitude + 0.0004, result.location.longitude - 0.0004);
-//        pointAnnotation.title = @"测试点1";
-//        pointAnnotation.subtitle = @"测试点";
-//        [_mapView addAnnotation:pointAnnotation];
-//        [_mapView selectAnnotation:pointAnnotation animated:YES];
-//
-//        BMKPointAnnotation *pointAnnotation1 = [[BMKPointAnnotation alloc] init];
-//        pointAnnotation1.coordinate = CLLocationCoordinate2DMake(result.location.latitude, result.location.longitude + 0.0004);
-//        pointAnnotation1.title = @"测试点2";
-//        pointAnnotation1.subtitle = @"测试点";
-//        [_mapView addAnnotation:pointAnnotation1];
-//        [_mapView selectAnnotation:pointAnnotation1 animated:YES];
-
-//        NSArray *pointArr = @[pointAnnotation,pointAnnotation1];
-//        [_pointAnnotationsArr addObjectsFromArray:pointArr];
+        //       //测试点大头针
+        //        BMKPointAnnotation *pointAnnotation = [[BMKPointAnnotation alloc] init];
+        //        pointAnnotation.coordinate = CLLocationCoordinate2DMake(result.location.latitude + 0.0004, result.location.longitude - 0.0004);
+        //        pointAnnotation.title = @"测试点1";
+        //        pointAnnotation.subtitle = @"测试点";
+        //        [_mapView addAnnotation:pointAnnotation];
+        //        [_mapView selectAnnotation:pointAnnotation animated:YES];
+        //
+        //        BMKPointAnnotation *pointAnnotation1 = [[BMKPointAnnotation alloc] init];
+        //        pointAnnotation1.coordinate = CLLocationCoordinate2DMake(result.location.latitude, result.location.longitude + 0.0004);
+        //        pointAnnotation1.title = @"测试点2";
+        //        pointAnnotation1.subtitle = @"测试点";
+        //        [_mapView addAnnotation:pointAnnotation1];
+        //        [_mapView selectAnnotation:pointAnnotation1 animated:YES];
+        
+        //        NSArray *pointArr = @[pointAnnotation,pointAnnotation1];
+        //        [_pointAnnotationsArr addObjectsFromArray:pointArr];
         
     }
 }
@@ -389,35 +389,35 @@
 {
     BMKPointAnnotation *pointAnnotation = [[BMKPointAnnotation alloc] init];
     pointAnnotation.coordinate = CLLocationCoordinate2DMake(40.003765106201172 + 0.0004, 116.35929870605469 - 0.0004);
-    pointAnnotation.title = @"上行：1";
-    pointAnnotation.subtitle = @"下行：1";
+    pointAnnotation.title = @"唯有工作";
+    pointAnnotation.subtitle = @"能使我快乐";
     [_mapView addAnnotation:pointAnnotation];
-//    [_mapView selectAnnotation:pointAnnotation animated:YES];
+    //    [_mapView selectAnnotation:pointAnnotation animated:YES];
     
     BMKPointAnnotation *pointAnnotation1 = [[BMKPointAnnotation alloc] init];
     pointAnnotation1.coordinate = CLLocationCoordinate2DMake(40.003765106201172, 116.35929870605469 + 0.0004);
-    pointAnnotation1.title = @"上行：2";
-    pointAnnotation1.subtitle = @"下行：2";
+    pointAnnotation1.title = @"朕的一生啊，";
+    pointAnnotation1.subtitle = @"就是要写bug";
     [_mapView addAnnotation:pointAnnotation1];
-//    [_mapView selectAnnotation:pointAnnotation1 animated:YES];
+    //    [_mapView selectAnnotation:pointAnnotation1 animated:YES];
     
     
     BMKPointAnnotation *pointAnnotation2 = [[BMKPointAnnotation alloc] init];
     pointAnnotation2.coordinate = CLLocationCoordinate2DMake(40.003765106201172 + 0.0004, 116.35929870605469 + 0.0004);
-    pointAnnotation2.title = @"上行：3";
-    pointAnnotation2.subtitle = @"下行：3";
+    pointAnnotation2.title = @"似奔腾之群马，";
+    pointAnnotation2.subtitle = @"似瀑下之江流";
     [_mapView addAnnotation:pointAnnotation2];
     
     BMKPointAnnotation *pointAnnotation3 = [[BMKPointAnnotation alloc] init];
     pointAnnotation3.coordinate = CLLocationCoordinate2DMake(40.003765106201172, 116.35929870605469 + 0.0008);
-    pointAnnotation3.title = @"上行：4";
-    pointAnnotation3.subtitle = @"下行：4";
+    pointAnnotation3.title = @"群马喜疾驰";
+    pointAnnotation3.subtitle = @"江流爱湍游";
     [_mapView addAnnotation:pointAnnotation3];
     
     BMKPointAnnotation *pointAnnotation4 = [[BMKPointAnnotation alloc] init];
     pointAnnotation4.coordinate = CLLocationCoordinate2DMake(40.003765106201172 + 0.0008, 116.35929870605469 + 0.0004);
-    pointAnnotation4.title = @"上行：5";
-    pointAnnotation4.subtitle = @"下行：5";
+    pointAnnotation4.title = @"日月虽有坠，";
+    pointAnnotation4.subtitle = @"我志岂肯休？";
     [_mapView addAnnotation:pointAnnotation4];
     
 }
@@ -433,8 +433,8 @@
 //换大头针
 - (BMKAnnotationView *)mapView:(BMKMapView *)mapView viewForAnnotation:(id<BMKAnnotation>)annotation{
     
-        //移除标注点
-//        [_mapView removeAnnotations:_pointAnnotationsArr];
+    //移除标注点
+    //        [_mapView removeAnnotations:_pointAnnotationsArr];
     
     if(annotation == _nowPointAnnotation)//当前位置点
     {
@@ -450,13 +450,13 @@
     }
     else
     {
-//        BMKPinAnnotationView *newAnnotationView = [[BMKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"myAnnotation"];
-//        newAnnotationView.pinColor = BMKPinAnnotationColorPurple;
-//        newAnnotationView.animatesDrop = YES;// 设置该标注点动画显示
-//        //        newAnnotationView.draggable = YES;//设置可拖拽
-//        newAnnotationView.annotation = annotation;
-//        newAnnotationView.image = [UIImage imageNamed:@"robotAddress"];   //把大头针换成别的图片
-//        newAnnotationView.size = CGSizeMake(23, 23);
+        //        BMKPinAnnotationView *newAnnotationView = [[BMKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"myAnnotation"];
+        //        newAnnotationView.pinColor = BMKPinAnnotationColorPurple;
+        //        newAnnotationView.animatesDrop = YES;// 设置该标注点动画显示
+        //        //        newAnnotationView.draggable = YES;//设置可拖拽
+        //        newAnnotationView.annotation = annotation;
+        //        newAnnotationView.image = [UIImage imageNamed:@"robotAddress"];   //把大头针换成别的图片
+        //        newAnnotationView.size = CGSizeMake(23, 23);
         
         MyAnnotationView *newAnnotationView = [[MyAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"myAnnotation"];
         newAnnotationView.pinColor = BMKPinAnnotationColorPurple;
@@ -475,7 +475,7 @@
 {
     BMKAnnotationView *annotationView = [[BMKAnnotationView alloc] init];
     annotationView = view;
-//        view.annotation.coordinate
+    //        view.annotation.coordinate
 }
 /*
  //拖动大头针
@@ -509,5 +509,6 @@
  break;
  }
  }
-  */
+ */
 @end
+

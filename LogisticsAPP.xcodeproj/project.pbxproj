@@ -25,9 +25,9 @@
 		B6148152200C56D50049DD3F /* mapCenter_point@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B6148151200C56D50049DD3F /* mapCenter_point@2x.png */; };
 		B6148154200C6FE40049DD3F /* nowAddress@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B6148153200C6FE40049DD3F /* nowAddress@2x.png */; };
 		B6148156200C70010049DD3F /* robotAddress@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B6148155200C70000049DD3F /* robotAddress@2x.png */; };
-		B6B34C3B200EEA8D00F06040 /* 地图.gif in Resources */ = {isa = PBXBuildFile; fileRef = B6B34C38200EEA8D00F06040 /* 地图.gif */; };
 		B6B34C3E200EEAE500F06040 /* plist.png in Resources */ = {isa = PBXBuildFile; fileRef = B6B34C3C200EEAE500F06040 /* plist.png */; };
 		B6B34C3F200EEAE500F06040 /* backgroud.png in Resources */ = {isa = PBXBuildFile; fileRef = B6B34C3D200EEAE500F06040 /* backgroud.png */; };
+		B6B34C48200F42BA00F06040 /* map.gif in Resources */ = {isa = PBXBuildFile; fileRef = B6B34C47200F42BA00F06040 /* map.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,9 +61,9 @@
 		B6148151200C56D50049DD3F /* mapCenter_point@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mapCenter_point@2x.png"; sourceTree = "<group>"; };
 		B6148153200C6FE40049DD3F /* nowAddress@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nowAddress@2x.png"; sourceTree = "<group>"; };
 		B6148155200C70000049DD3F /* robotAddress@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "robotAddress@2x.png"; sourceTree = "<group>"; };
-		B6B34C38200EEA8D00F06040 /* 地图.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "地图.gif"; sourceTree = "<group>"; };
 		B6B34C3C200EEAE500F06040 /* plist.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plist.png; sourceTree = "<group>"; };
 		B6B34C3D200EEAE500F06040 /* backgroud.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backgroud.png; sourceTree = "<group>"; };
+		B6B34C47200F42BA00F06040 /* map.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = map.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,7 +175,7 @@
 			children = (
 				B6B34C3D200EEAE500F06040 /* backgroud.png */,
 				B6B34C3C200EEAE500F06040 /* plist.png */,
-				B6B34C38200EEA8D00F06040 /* 地图.gif */,
+				B6B34C47200F42BA00F06040 /* map.gif */,
 			);
 			path = showImages;
 			sourceTree = SOURCE_ROOT;
@@ -252,8 +252,8 @@
 				B614810C200C321F0049DD3F /* LaunchScreen.storyboard in Resources */,
 				B6148150200C56C30049DD3F /* back_userPoint@2x.png in Resources */,
 				B6B34C3E200EEAE500F06040 /* plist.png in Resources */,
-				B6B34C3B200EEA8D00F06040 /* 地图.gif in Resources */,
 				B6148156200C70010049DD3F /* robotAddress@2x.png in Resources */,
+				B6B34C48200F42BA00F06040 /* map.gif in Resources */,
 				B6148109200C321F0049DD3F /* Assets.xcassets in Resources */,
 				B6148107200C321F0049DD3F /* Main.storyboard in Resources */,
 				B6B34C3F200EEAE500F06040 /* backgroud.png in Resources */,
