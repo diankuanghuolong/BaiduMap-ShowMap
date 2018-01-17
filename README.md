@@ -16,6 +16,13 @@ target '你的项目名’ do
 
    （a.）plist文件配置如下图，4项，第一项为网络https配置：
    
+   App Transport Security Settings ----https设置
+   Privacy - Location Always and When In Use Usage Description -
+  ----后台使用位置
+  Privacy - Location Always Usage Description -
+  ----总是使用位置
+  Privacy - Location When In Use Usage Description -----使用期间访问位置
+  
 ![展示图片](https://github.com/diankuanghuolong/BaiduMap-ShowMap/blob/master/showImages/plist.png)
 
     (b.)后台定位设置，如图
