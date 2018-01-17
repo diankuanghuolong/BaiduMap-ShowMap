@@ -12,13 +12,13 @@ inhibit_all_warnings!   ##忽略警告⚠️
 target '你的项目名’ do
 - 2.环境配置：因为要用到后台定位和地图定位功能，需要作如下配置
 
-![展示图片]()
+![展示图片](https://github.com/diankuanghuolong/BaiduMap-ShowMap/blob/master/showImages/plist.png)
 
    （a.）plist文件配置如下图，4项，第一项未网络https配置：
 
     (b.)后台定位设置，如图
     
-![展示图片]()
+![展示图片](https://github.com/diankuanghuolong/BaiduMap-ShowMap/blob/master/showImages/backgroud.png)
 
 -3.注册：在百度地图开发平台注册并创建你的app，记得app名字要和你创建的项目名字一直，然后在百度平台获取key。
         再进入你项目中，AppDelegate中设置。将你的AppDelegate后缀改为.mm（用到C语法，可以自己去查查）。
