@@ -1,7 +1,7 @@
 # BaiduMap-ShowMap
 百度地图定位，地图展示功能、大头针，多个大头针及气泡title展示。
 
-![简书]（https://www.jianshu.com/p/da3b11d5dfba）
+[简书]（https://www.jianshu.com/p/da3b11d5dfba）
 
 #为了维护宇宙的和平，又鉴于网上资料的不详细，更为了防止世界被破坏，本文讲详细讲解一个百度的集成方案，保证实用。
 >简介：百度地图的定位以及地图显示功能集成。手动集成的方法此处不作介绍了，我用的是pod方法集成的。
@@ -33,7 +33,7 @@ target '你的项目名’ do
 {
     _mapManager = [[BMKMapManager alloc]init];
     // 如果要关注网络及授权验证事件，请设定     generalDelegate参数
-    BOOL ret = [_mapManager start:@"hHycKldnuGp2wwpjgYBvlbsYcmLUCjHb"  generalDelegate:nil];
+    BOOL ret = [_mapManager start:@"hHycKldnuGp2wwpjgYBvlbsYcmLUCjHb"  generalDelegate:nil];
     if (!ret) {
     NSLog(@"manager start failed!");
     }
