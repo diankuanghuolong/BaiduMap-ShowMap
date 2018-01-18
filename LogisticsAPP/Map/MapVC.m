@@ -20,6 +20,7 @@
 
 #import "LocationInfo.h"
 
+//------------------------------ 自定义BMKAnnotationView，用于显示title  ----------------------------------
 // 自定义BMKAnnotationView，用于显示title
 @interface MyAnnotationView : BMKPinAnnotationView
 
@@ -73,6 +74,8 @@
 @property (nonatomic ,strong)UILabel *subTitleL;
 
 @end
+//------------------------------------------------------------------------------------------------------
+
 
 @interface MapVC ()<BMKMapViewDelegate,BMKGeoCodeSearchDelegate,BMKLocationServiceDelegate>
 {
@@ -84,7 +87,9 @@
     UIButton *_backUserPoint;//返回用户位置
     NSString *_addressStr;//记录位置
     
-    NSMutableArray *_pointAnnotationsArr;//标注点数组（当前为假数据，实际中，使用后台返回坐标点数组）
+//    NSMutableArray *_pointAnnotationsArr;//标注点数组（当前为假数据，实际中，使用后台返回坐标点数组）
+    
+    NSArray *_dataSource;//请求数据
 }
 @property(nonatomic,strong)BMKGeoCodeSearch * searcher;
 @property(nonatomic,strong)BMKLocationService * locationService;
@@ -102,7 +107,7 @@
     self.title = @"地图";
     self.view.backgroundColor = [UIColor whiteColor];
     
-    _pointAnnotationsArr = [NSMutableArray new];
+//    _pointAnnotationsArr = [NSMutableArray new];
     
     [self loadMapView];
     [self position:nil];//定位
@@ -133,7 +138,8 @@
 #pragma mark ===== downLoad =====
 -(void)downLoadLng:(NSString *)lng andLat:(NSString *)lat
 {
-    //
+    //请求接口
+    _dataSource = @[@{@"lat":@(40.003765106201172),@"long":@(116.35929870605469),@"title":@"唯有工作",@"subtitle":@"能使我快乐"},@{@"lat":@(40.003765106201172 + 0.0004),@"long":@(116.35929870605469 - 0.0004),@"title":@"朕的一生啊，",@"subtitle":@"就是要写bug"},@{@"lat":@(40.003765106201172 + 0.0004 * 2),@"long":@(116.35929870605469 - 0.0004*2),@"title":@"似奔腾之群马，",@"subtitle":@"似瀑下之江流"},@{@"lat":@(40.003765106201172 + 0.0004*3),@"long":@(116.35929870605469 - 0.0004 * 3),@"title":@"群马喜疾驰",@"subtitle":@"江流爱湍游"},@{@"lat":@(40.003765106201172 + 0.0004 * 4),@"long":@(116.35929870605469 - 0.0004 *4),@"title":@"日月虽有坠，",@"subtitle":@"我志岂肯休？"},@{@"lat":@(40.003765106201172 + 0.0004 * 5),@"long":@(116.35929870605469 - 0.0004 *5),@"title":@"我志岂肯休？",@"subtitle":@"日月虽有坠，"}];
 }
 #pragma mark ===== loadSubViews  =====
 - (void)loadMapView
@@ -387,39 +393,18 @@
 #pragma mark =====  tool  =====
 -(void)showAllPoints
 {
-    BMKPointAnnotation *pointAnnotation = [[BMKPointAnnotation alloc] init];
-    pointAnnotation.coordinate = CLLocationCoordinate2DMake(40.003765106201172 + 0.0004, 116.35929870605469 - 0.0004);
-    pointAnnotation.title = @"唯有工作";
-    pointAnnotation.subtitle = @"能使我快乐";
-    [_mapView addAnnotation:pointAnnotation];
-    //    [_mapView selectAnnotation:pointAnnotation animated:YES];
-    
-    BMKPointAnnotation *pointAnnotation1 = [[BMKPointAnnotation alloc] init];
-    pointAnnotation1.coordinate = CLLocationCoordinate2DMake(40.003765106201172, 116.35929870605469 + 0.0004);
-    pointAnnotation1.title = @"朕的一生啊，";
-    pointAnnotation1.subtitle = @"就是要写bug";
-    [_mapView addAnnotation:pointAnnotation1];
-    //    [_mapView selectAnnotation:pointAnnotation1 animated:YES];
-    
-    
-    BMKPointAnnotation *pointAnnotation2 = [[BMKPointAnnotation alloc] init];
-    pointAnnotation2.coordinate = CLLocationCoordinate2DMake(40.003765106201172 + 0.0004, 116.35929870605469 + 0.0004);
-    pointAnnotation2.title = @"似奔腾之群马，";
-    pointAnnotation2.subtitle = @"似瀑下之江流";
-    [_mapView addAnnotation:pointAnnotation2];
-    
-    BMKPointAnnotation *pointAnnotation3 = [[BMKPointAnnotation alloc] init];
-    pointAnnotation3.coordinate = CLLocationCoordinate2DMake(40.003765106201172, 116.35929870605469 + 0.0008);
-    pointAnnotation3.title = @"群马喜疾驰";
-    pointAnnotation3.subtitle = @"江流爱湍游";
-    [_mapView addAnnotation:pointAnnotation3];
-    
-    BMKPointAnnotation *pointAnnotation4 = [[BMKPointAnnotation alloc] init];
-    pointAnnotation4.coordinate = CLLocationCoordinate2DMake(40.003765106201172 + 0.0008, 116.35929870605469 + 0.0004);
-    pointAnnotation4.title = @"日月虽有坠，";
-    pointAnnotation4.subtitle = @"我志岂肯休？";
-    [_mapView addAnnotation:pointAnnotation4];
-    
+ 
+    NSArray *arr = _dataSource;
+    for (int i = 0 ; i < arr.count; i ++)
+    {
+        NSLog(@"lat == %f,long == %f",[arr[i][@"lat"] doubleValue],[arr[i][@"long"] doubleValue]);
+        BMKPointAnnotation *pointAnnotation = [[BMKPointAnnotation alloc] init];
+        pointAnnotation.coordinate = CLLocationCoordinate2DMake([arr[i][@"lat"] doubleValue], [arr[i][@"long"] doubleValue]);
+        pointAnnotation.title = arr[i][@"title"];
+        pointAnnotation.subtitle = arr[i][@"subtitle"];
+        [_mapView addAnnotation:pointAnnotation];
+        //    [_mapView selectAnnotation:pointAnnotation animated:YES];
+    }
 }
 //更新地图中心位置
 - (void)mapView:(BMKMapView *)mapView regionDidChangeAnimated:(BOOL)animated
@@ -434,7 +419,7 @@
 - (BMKAnnotationView *)mapView:(BMKMapView *)mapView viewForAnnotation:(id<BMKAnnotation>)annotation{
     
     //移除标注点
-    //        [_mapView removeAnnotations:_pointAnnotationsArr];
+//    [_mapView removeAnnotations:_pointAnnotationsArr];
     
     if(annotation == _nowPointAnnotation)//当前位置点
     {
