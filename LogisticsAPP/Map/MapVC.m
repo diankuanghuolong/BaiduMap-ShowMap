@@ -393,11 +393,10 @@
 #pragma mark =====  tool  =====
 -(void)showAllPoints
 {
- 
     NSArray *arr = _dataSource;
     for (int i = 0 ; i < arr.count; i ++)
     {
-        NSLog(@"lat == %f,long == %f",[arr[i][@"lat"] doubleValue],[arr[i][@"long"] doubleValue]);
+//        NSLog(@"lat == %f,long == %f",[arr[i][@"lat"] doubleValue],[arr[i][@"long"] doubleValue]);
         BMKPointAnnotation *pointAnnotation = [[BMKPointAnnotation alloc] init];
         pointAnnotation.coordinate = CLLocationCoordinate2DMake([arr[i][@"lat"] doubleValue], [arr[i][@"long"] doubleValue]);
         pointAnnotation.title = arr[i][@"title"];
