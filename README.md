@@ -76,7 +76,7 @@ demo中的MapVC控制器中，设置了定位、地图、正反编码、大头�
     //换大头针
     - (BMKAnnotationView *)mapView:(BMKMapView *)mapView viewForAnnotation:(id<BMKAnnotation>)annotation；
 中修改BMKAnnotationView，和BMKAnnotation ;
-3.显示title ：  -(void)showAllPoints; 将BMKPointAnnotation添加到map上，但是不显示BMKPointAnnotation的title，使自定义的BMKAnnotationView的title = pointAnnotation.title = @"上行：1";
+3.显示title ：  -(void)showAllPoints; 将BMKPointAnnotation添加到map上，但是不显示BMKPointAnnotation的title，使自定义的BMKAnnotationView的title = pointAnnotation.title = @"title：1";
 
 1.----------------------------------------------------------------------------------------------------
         // 自定义BMKAnnotationView，用于显示title
