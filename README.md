@@ -1,6 +1,8 @@
 # BaiduMap-ShowMap
 百度地图定位，地图展示功能、大头针，多个大头针及气泡title展示。
 
+[![Github All Releases](https://img.shields.io/github/downloads/atom/atom/total.svg)](https://github.com/diankuanghuolong/BaiduMap-ShowMap)
+
 [简书](https://www.jianshu.com/p/da3b11d5dfba)
 
 #为了维护宇宙的和平，又鉴于网上资料的不详细，更为了防止世界被破坏，本文讲详细讲解一个百度的集成方案，保证实用。
